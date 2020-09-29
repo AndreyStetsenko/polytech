@@ -144,10 +144,44 @@
     flex-direction: column;
   }
 
+  &-logo {
+    @media screen and (max-width: 768px) {
+      width: 35vw;
+    }
+  }
+
+  &-contacts {
+    width: 35%;
+
+    @media screen and (max-width: 992px) {
+      width: 55vw;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding-right: 5vw;
+      padding-left: 5vw;
+    }
+
+    @media screen and (max-width: 335px) {
+      display: none;
+    }
+  }
+
   &-burger {
+    position: relative;
+    right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (min-width: 992px) {
+      position: absolute;
+    }
+
+    @media screen and (max-width: 992px) {
+      width: 10vw;
+    }
   }
 
   &-phone {
@@ -161,13 +195,21 @@
       width: 100%;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       position: relative;
       padding-top: 20px;
       padding-bottom: 20px;
       background-color: var(--white);
 
       @media screen and (max-width: 992px) {
+        height: 90px;
         box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      &--cont {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
     }
 
@@ -292,6 +334,21 @@
             @media (min-width: 992px) and (max-width: 1280px) {
               font-size: 10px;
             }
+
+            @media screen and (max-width: 992px) {
+              border: 0;
+              justify-content: flex-start;
+              padding-left: 0 !important;
+
+              &:before {
+                right: 10px;
+              }
+
+              .pt-icon {
+                width: 50px;
+                background-size: contain;
+              }
+            }
           }
 
           &.dropdown, .dropdown-submenu {
@@ -343,10 +400,13 @@
                     transition: .2s;
 
                     &:hover {
-                      padding-left: 10px !important;
-                      padding-right: 30px !important;
                       color: var(--blue) !important;
                       background-color: transparent !important;
+
+                      @media screen and (min-width: 992px) {
+                        padding-left: 10px !important;
+                        padding-right: 30px !important;
+                      }
                     }
                   }
                 }

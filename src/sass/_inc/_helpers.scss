@@ -1,16 +1,24 @@
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0 !important;
+}
+
 body {
   background-color: var(--light) !important;
 }
 
-h1 {
+.title h1 {
   font-family: var(--font-family-raleway) !important;
   font-size: 50px !important;
   font-style: normal !important;
   font-weight: 800 !important;
-  line-height: 65px !important;
+  text-transform: uppercase;
   letter-spacing: 0.05em !important;
   text-align: left !important;
   color: var(--dark);
+
+  @media screen and (max-width: 768px) {
+    font-size: 27px !important;
+  }
 }
 
 h2 {
@@ -18,10 +26,43 @@ h2 {
   font-size: 35px !important;
   font-style: normal !important;
   font-weight: 700 !important;
-  line-height: 45px !important;
   letter-spacing: 0em !important;
   text-align: left !important;
   color: var(--dark);
+}
+
+.prime {
+  &-light {
+    background-color: var(--white);
+  }
+}
+
+.prime-cont {
+  &--title {
+    font-family: 'Raleway';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+    color: var(--dark);
+
+    @media screen and (max-width: 768px) {
+      font-size: 21px !important;
+    }
+  }
+
+  &--desc {
+    font-family: 'Roboto';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: var(--gray);
+
+    @media screen and (max-width: 768px) {
+      font-size: 19px !important;
+    }
+  }
 }
 
 // Bootstrap
@@ -31,16 +72,31 @@ h2 {
 
 :root {
   --dark: #3A3A3A;
+  --gray: #717171;
+  --l-gray: #C0C0C0;
   --blue: #10BCF4;
   --d-blue: #0090BF;
   --da-blue: #087CA1;
   --dark-blue: #083146;
+  --sdark-blue: #072636;
   --lighter: #E8E8E8;
   --light: #F9FAFC;
   --l-light: #EEEEEE;
   --font-family-raleway: 'Raleway';
   --font-family-roboto: 'Roboto';
   --box-shadow-btn-primary: 0px 3px 7px rgba(16, 188, 244, 0.5);
+}
+
+// Background
+
+.bg-white {
+  background-color: var(--white);
+}
+
+// Box shadow blocks
+
+.bs-head {
+  box-shadow: 0px 2px 20px rgba(0,0,0,0.1)
 }
 
 // Buttons
@@ -262,6 +318,14 @@ h2 {
   }
 }
 
+// Reverse
+
+.md-reverse {
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+}
+
 // Fonts
 
 @import "../../fonts/fontawesome/scss/fontawesome";
@@ -270,6 +334,35 @@ h2 {
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Images
+
+.sfull-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &--img {
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    left: 0;
+    top: -10%;
+    object-fit: contain;
+
+    @media screen and (max-width: 1200px) {
+      height: 110%;
+      top: -5%;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      top: -60px;
+    }
+  }
+}
 
 // Icons
 
@@ -307,5 +400,25 @@ h2 {
     width: 37px;
     height: 34px;
     background-image: url('../img/icons/nav/print.svg');
+  }
+}
+
+$ico-smile: '../img/icons/smile.png';
+
+.ico {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+
+  &-smile {
+    width: 40px;
+    height: 40px;
+    background-image: url($ico-smile);
+
+    @media screen and (max-width: 768px) {
+      width: 25px;
+      height: 25px;
+    }
   }
 }

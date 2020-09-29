@@ -5,6 +5,46 @@
   padding: 40px 0;
   background-color: var(--dark-blue);
 
+  &-col {
+    @media screen and (max-width: 1200px) {
+      .footer-cont {
+        padding-bottom: 50px;
+      }
+
+      &:last-child {
+        .footer-cont {
+          padding-bottom: 0;
+        }
+      }
+
+      &:nth-last-child(2) {
+        .footer-cont {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &-col {
+    @media screen and (max-width: 768px) {
+      .footer-cont {
+        padding-bottom: 50px;
+      }
+
+      &:last-child {
+        .footer-cont {
+          padding-bottom: 0;
+        }
+      }
+
+      &:nth-last-child(2) {
+        .footer-cont {
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
+
   &-cont {
     &-title {
       h4 {
@@ -49,6 +89,7 @@
           color: var(--l-light);
           border-bottom: 1px solid transparent;
           transition: .2s;
+          word-break: break-word;
 
           &:hover {
             border-bottom: 1px solid var(--blue);
