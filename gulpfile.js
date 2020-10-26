@@ -229,8 +229,8 @@ gulp.task('deps', function () {
                 message: '<%= error.message %>'
             })
         }))
-        .pipe(concat(config.jsDeps.file))
-        .pipe(uglify())
+        // .pipe(concat(config.jsDeps.file))
+        // .pipe(uglify())
         .pipe(gulp.dest(config.jsDeps.dest));
 });
 

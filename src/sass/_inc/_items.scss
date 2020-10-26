@@ -1,0 +1,18 @@
+.items {
+  padding-top: 50px;
+  padding-bottom: 95px;
+
+  .btn-more {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-select-more {
+    margin-top: 50px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}

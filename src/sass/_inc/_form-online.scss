@@ -1,0 +1,96 @@
+.form-online {
+  width: 100%;
+  padding: 40px 45px 50px;
+  background-color: var(--light);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+  @media screen and (max-width: 768px) {
+    padding: 30px 20px 25px;
+  }
+
+  &-head {
+    margin-bottom: 30px;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+      text-align: left;
+    }
+  }
+
+  &-title {
+    padding-bottom: 15px;
+    font-family: 'Raleway';
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  &-description {
+    font-size: 19px;
+
+    b {
+      color: var(--blue);
+    }
+  }
+}
+
+.form {
+  &-group {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-control {
+    height: 60px;
+    padding: 15px 30px;
+    background: #fff;
+    border: 1px solid var(--t-light);
+    border-radius: 10px;
+    font-size: 21px;
+    color: var(--dark);
+    transition: .2s;
+
+    @media screen and (max-width: 768px) {
+      font-size: 19px;
+    }
+
+    &:hover {
+      border-color: rgba(16, 188, 244, 0.5);
+    }
+
+    &:focus {
+      border-color: var(--da-blue);
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      font-size: 21px;
+      color: var(--s-gray);
+
+      @media screen and (max-width: 768px) {
+        font-size: 19px;
+      }
+    }
+  }
+
+  &-dop {
+    margin-bottom: 45px;
+    display: block;
+    font-size: 16px;
+    color: var(--dark);
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+      color: var(--blue);
+    }
+
+    .icon-chevron {
+      margin-right: 15px;
+      color: var(--da-blue);
+    }
+  }
+}

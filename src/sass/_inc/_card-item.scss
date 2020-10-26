@@ -1,0 +1,116 @@
+.card-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(black, .05);
+  transition: .2s;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    box-shadow: 0px 4px 10px rgba(black, .1);
+    transform: scale(1.01);
+  }
+
+  &__header {
+    position: relative;
+
+    &--img {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 10px 10px 0 0;
+
+      img {
+        width: 101%;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+      }
+    }
+
+    &--title {
+      width: 100%;
+      padding: 10px;
+      position: absolute;
+      bottom: -25px;
+      display: block;
+      font-family: 'Raleway';
+      font-weight: bold;
+      font-size: 23px;
+      color: #fff;
+      text-align: center;
+      background: var(--blue);
+      border-radius: 10px;
+    }
+  }
+
+  &__body {
+    padding: 35px 20px 0;
+
+    &--info {
+      padding-bottom: 15px;
+
+      &:last-child {
+        padding-bottom: 5px;
+      }
+
+      &-title {
+        font-family: 'Raleway';
+        font-weight: bold;
+        font-size: 17px;
+        color: var(--dark);
+      }
+    }
+
+    &--more {
+      padding-top: 3px;
+
+      &-cont {
+        padding: 0 5px 0 0;
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-size: 15px;
+        color: var(--gray);
+        text-transform: uppercase;
+        border-right: 1px solid var(--gray);
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+          border-right: 0;
+        }
+      }
+    }
+
+    &--price {
+      position: relative;
+
+      &-item {
+        position: absolute;
+        right: 0;
+        top: -50px;
+        font-size: 18px;
+        color: var(--dark);
+        font-weight: 500;
+
+        .item-price {
+          font-size: 24px;
+          color: var(--blue);
+
+          &-ico {
+            padding-left: 5px;
+            font-size: 24px;
+            color: var(--blue);
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    padding: 0 20px 15px;
+  }
+}

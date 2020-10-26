@@ -1,0 +1,9 @@
+.person-btn {
+  padding-top: 60px;
+
+  .btn-select {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+}
